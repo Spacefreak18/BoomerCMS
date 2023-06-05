@@ -24,5 +24,12 @@ generates the file groff file. I recommend adding those to your .gitignore.
 Setup your webserver to point to the location of your forked BoomerCMS repository with correct privileges.
 Optionally setup a cronjob to automatically run git pull and generate.sh for automated periodic deploys.
 
+# Upgrading
+To get and updates made to boomercms, assuming you create a remote called boomercms and perform a merge.
+```
+git remote add boomercms https://github.com/spacefreak18/boomercms
+git merge --no-ff --ours boomercms/master
+```
+
 # Shellcheck
 Run shellcheck to validate POSIX compliance with shellcheck -x .settings.sh generate.sh
